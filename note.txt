@@ -1,0 +1,53 @@
+mysql -u root -p
+
+create table messages(id serial unique not null, primary key (id), message text,  created_at timestamp);
+
+Message = message:new(id, "Hello!", erlang:now()).
+Message:save().
+Messages = boss_db:find(message, []).
+
+=================================================================
+API
+=================================================================
+http://localhost:8001/messages/index
+=================================================================
+
+=================================================================
+
+-module(loy_message_websocket, [Req, SessionId]).
+
+-behaviour(boss_service_handler).
+
+-export([
+  handle_broadcast/2,
+  handle_close/4,
+  handle_incoming/4,
+  handle_join/3,
+  init/0,
+  terminate/2
+]).
+
+
+init() ->
+  io:format("--------------------------------------------------------init~n", []),
+  {ok, []}.
+
+handle_join(_URL, _Pid, State) ->
+  {noreply, State}.
+
+handle_close(_Reason, _URL, _Pid, State) ->
+  {noreply, State}.
+
+handle_incoming(_URL, Pid, Message, State) ->
+  Pid ! {text, ["Answer to: " ++ Message]},
+  {noreply, State}.
+
+handle_broadcast(_Message, State) ->
+  {noreply, State}.
+
+terminate(_Reason, _State) ->
+  ok.
+
+=================================================================
+
+https://github.com/joaomilho/apalachin/blob/master/src/websocket/chat_chat_protocol_websocket.erl
