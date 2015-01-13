@@ -6,6 +6,7 @@
       function listen_for_events(timestamp) {
         $.ajax("/messages/receive_message/" + timestamp, { success:
           function(data, code, xhr) {
+            // alert("Hello");
             for (var i = 0; i < data.message.length; i++) {
               var msg = data.message[i].message;
               $("#message_list").append("<li>" + msg + "</li>");

@@ -19,6 +19,9 @@ create('POST', []) ->
       {ok, [{errors, ErrorList}, {new_msg, NewMessage}]}
   end.
 
+% Since we are talking Comet, you would do a boss_mq:pull with a 15 second timeout. 
+% Once that times out, the server sends a last timestamp in response to the client 
+% telling it to resubmit the polling request from that timestamp.
 receive_message('GET', [LastTimestamp]) ->
-  {ok, Timestamp, Message} = boss_mq:pull("Channel", list_to_integer(LastTimestamp)),
+  {ok, Timestamp, Message} = boss_mq:pull("Channel", list_to_integer(LastTimestamp), 60),
   {json, [{timestamp, Timestamp}, {message, Message}]}.
