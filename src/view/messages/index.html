@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Message System</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script>
+      function listen_for_events(timestamp) {
+        $.ajax("/messages/receive_message/" + timestamp, { success:
+          function(data, code, xhr) {
+            for (var i = 0; i < data.message.length; i++) {
+              var msg = data.message[i].message;
+              $("#message_list").append("<li>" + msg + "</li>");
+            }
+            listen_for_events(data.timestamp);
+          }
+        });
+      }
+
+      $(document).ready(function() {
+        listen_for_events({{ timestamp }});
+      });
+    </script>
+</head>
+<body>
+  {% block body %}
+    <ul id="message_list">
+      {% for message in messages %}
+        <li>{{ message.message }}</li>
+          {% empty %}
+        <li>No greetings!</li>
+      {% endfor %}
+    </ul>
+  {% endblock %}
+  <!-- <p><a href="{% url action="create" %}">Send Message</a></p> -->
+</body>
+</html>
