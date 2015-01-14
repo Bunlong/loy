@@ -7380,3 +7380,264 @@
 2015-01-13 23:47:11.062 [error] <0.169.0> Ranch listener boss_http_listener had connection process started with cowboy_protocol:start_link/4 at <0.338.0> exit with reason: killed
 
 2015-01-13 23:47:16.420 [error] <0.123.0> Supervisor {<0.123.0>,poolboy_sup} had child boss_session_controller started with boss_session_controller:start_link([{name,{local,boss_session_pool}},{worker_module,boss_session_controller},{size,20},{max_overflow,...},...]) at undefined exit with reason shutdown in context shutdown_error
+2015-01-14 11:41:48.771 [info] <0.7.0> Application lager started on node loy@bunlong
+2015-01-14 11:41:48.791 [info] <0.7.0> Application crypto started on node loy@bunlong
+2015-01-14 11:41:48.798 [notice] <0.63.0>@lager_app:132 Deprecated lager_file_backend config detected, please consider updating it
+2015-01-14 11:41:48.827 [info] <0.7.0> Application mimetypes started on node loy@bunlong
+2015-01-14 11:41:48.922 [info] <0.95.0> Starting Boss in development mode....
+
+2015-01-14 11:41:48.951 [info] <0.95.0>@boss_db:start:72 Start Database Adapter boss_db_adapter_mock options [{adapter,mock},{cache_enable,false},{cache_prefix,db},{shards,[[{db_host,"localhost"},{db_adapter,mysql},{db_port,3306},{db_username,"root"},{db_password,"Q1p2m3g4"},{db_database,"loy"},{db_shard_id,loy},{db_shard_models,[message]}]]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]
+2015-01-14 11:41:49.182 [info] <0.95.0> Starting master services on loy@bunlong
+
+2015-01-14 11:41:49.276 [info] <0.7.0> Application tinymq started on node loy@bunlong
+2015-01-14 11:41:49.346 [info] <0.95.0> SSL:[]
+
+2015-01-14 11:41:49.350 [info] <0.95.0> Starting cowboy... on loy@bunlong
+
+2015-01-14 11:41:49.361 [info] <0.7.0> Application cowlib started on node loy@bunlong
+2015-01-14 11:41:49.397 [info] <0.7.0> Application ranch started on node loy@bunlong
+2015-01-14 11:41:49.454 [info] <0.7.0> Application cowboy started on node loy@bunlong
+2015-01-14 11:41:49.454 [info] <0.95.0> Starting http listener... on 0.0.0.0:8001 
+
+2015-01-14 11:41:49.669 [info] <0.95.0>@boss_load:load_all_modules:57 Loading application loy
+2015-01-14 11:41:49.717 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/src/mail/loy_outgoing_mail_controller.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-14 11:41:49.843 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/src/mail/loy_incoming_mail_controller.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-14 11:41:49.874 [info] <0.95.0>@boss_controller_compiler:compile:59 Compile controller /home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/src/controller/loy_messages_controller.erl
+2015-01-14 11:41:49.874 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/src/controller/loy_messages_controller.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_controller_compiler.add_routes_to_forms.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-14 11:41:49.915 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/src/model/message.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_record_compiler.trick_out_forms.2>},{token_transform,#Fun<boss_record_compiler.process_tokens.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-14 11:41:49.929 [info] <0.95.0>@boss_record_compiler:process_tokens:120 Tokens [{'-',{1,1}},{atom,{1,2},module},{'(',{1,8}},{atom,{1,9},message},{',',{1,16}},{'[',{1,18}},{var,{1,19},'Id'},{',',{1,21}},{var,{1,23},'Message'},{',',{1,30}},{var,{1,32},'CreatedAt'},{']',{1,41}},{')',{1,42}},{dot,{1,43}},{'-',{2,1}},{atom,{2,2},compile},{'(',{2,9}},{'[',{2,10}},{atom,{2,11},export_all},{']',{2,21}},{')',{2,22}},{dot,{2,23}},{atom,{4,1},after_create},{'(',{4,13}},{')',{4,14}},{'->',{4,16}},{atom,{5,3},send_message},{'(',{5,15}},{var,{5,16},'THIS'},{')',{5,20}},{dot,{5,21}},{atom,{7,1},send_message},{'(',{7,13}},{var,{7,14},'NewMessage'},{')',{7,24}},{'->',{7,26}},{'{',{8,3}},{atom,{8,4},ok},{',',{8,6}},{var,{8,8},'Timestamp'},{'}',{8,17}},{'=',{8,19}},{atom,{8,21},boss_mq},{':',{8,28}},{atom,{8,29},push},{'(',{8,33}},{string,{8,34},"Channel"},{',',{8,43}},{var,{8,45},'NewMessage'},{')',{8,55}},{dot,{8,56}},{eof,{9,1}}]
+2015-01-14 11:41:49.930 [notice] <0.95.0>@boss_record_compiler:make_generated_forms:225 Module "message" Parameters ['Id','Message','CreatedAt'] Attributes[{compile,[export_all]}]
+2015-01-14 11:41:49.994 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/src/view/lib/tag_modules/loy_custom_tags.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-14 11:41:50.028 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/src/view/lib/filter_modules/loy_custom_filters.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-14 11:41:50.031 [info] <0.95.0>@boss_load:compile_view_dir_erlydtl:311 Compile Modules "src/view/lib/tag_html"  loy_view_lib_tags
+2015-01-14 11:41:50.363 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/init/loy_01_news.erl" with options [{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/include"]}] 
+2015-01-14 11:42:47.559 [notice] <0.287.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:42:47.564 [warning] <0.6.0> lager_error_logger_h dropped 33 messages in the last second that exceeded the limit of 50 messages/sec
+2015-01-14 11:42:47.564 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:42:47.602 [notice] <0.287.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:42:47.602 [notice] <0.287.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:42:47.634 [info] <0.101.0>@boss_db_adapter_mysql:fetch:458 Query SELECT * FROM messages WHERE  TRUE ORDER BY id ASC
+2015-01-14 11:42:47.726 [info] <0.287.0> GET /messages/index [loy] 200 0ms
+2015-01-14 11:42:47.945 [notice] <0.288.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:42:47.945 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:42:47.948 [notice] <0.288.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:42:47.948 [notice] <0.288.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210567705844"]
+2015-01-14 11:43:42.036 [notice] <0.292.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:43:42.037 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:43:42.043 [notice] <0.292.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:43:42.043 [notice] <0.292.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:43:42.043 [info] <0.102.0>@boss_db_adapter_mysql:fetch:458 Query SELECT * FROM messages WHERE  TRUE ORDER BY id ASC
+2015-01-14 11:43:42.047 [info] <0.292.0> GET /messages/index [loy] 200 0ms
+2015-01-14 11:43:42.450 [notice] <0.293.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:43:42.451 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:43:42.455 [notice] <0.293.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:43:42.456 [notice] <0.293.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210622044574"]
+2015-01-14 11:43:48.012 [info] <0.288.0> GET /messages/receive_message/1421210567705844 [loy] 200 0ms
+2015-01-14 11:43:48.012 [error] <0.288.0>@boss_web_controller_handle_request:handle_request:30 Unhandled Error: exit:normal. Stacktrace: [{mochicow_request,send,2,[{file,"src/mochicow_request.erl"},{line,156}]},{mochicow_request,respond,2,[{file,"src/mochicow_request.erl"},{line,406}]},{boss_web_controller_handle_request,handle_request,3,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,26}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,529}]}]
+2015-01-14 11:44:26.547 [notice] <0.298.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:44:26.548 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:44:26.552 [notice] <0.298.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:44:26.552 [notice] <0.298.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:44:26.554 [info] <0.298.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:44:29.975 [notice] <0.300.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:44:29.976 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:44:29.979 [notice] <0.300.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:44:29.979 [notice] <0.300.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:44:30.006 [info] <0.103.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'Hello')
+2015-01-14 11:44:30.036 [info] <0.103.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:44:30.058 [info] <0.300.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:44:30.060 [notice] <0.302.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:44:30.084 [info] <0.293.0> GET /messages/receive_message/1421210622044574 [loy] 200 0ms
+2015-01-14 11:44:30.085 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:44:30.092 [notice] <0.302.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:44:30.092 [notice] <0.302.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:44:30.094 [info] <0.302.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:44:30.112 [notice] <0.304.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:44:30.113 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:44:30.117 [notice] <0.304.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:44:30.117 [notice] <0.304.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210670056669"]
+2015-01-14 11:44:36.141 [notice] <0.306.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:44:36.142 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:44:36.149 [notice] <0.306.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:44:36.149 [notice] <0.306.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:44:36.149 [info] <0.104.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'How are you?')
+2015-01-14 11:44:36.191 [info] <0.104.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:44:36.197 [info] <0.304.0> GET /messages/receive_message/1421210670056669 [loy] 200 0ms
+2015-01-14 11:44:36.199 [info] <0.306.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:44:36.207 [notice] <0.308.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:44:36.208 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:44:36.212 [notice] <0.310.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:44:36.213 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:44:36.215 [notice] <0.308.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:44:36.215 [notice] <0.308.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:44:36.218 [info] <0.308.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:44:36.219 [notice] <0.310.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:44:36.219 [notice] <0.310.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210676193234"]
+2015-01-14 11:45:36.222 [info] <0.310.0> GET /messages/receive_message/1421210676193234 [loy] 200 0ms
+2015-01-14 11:45:36.228 [notice] <0.312.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:45:36.228 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:45:36.231 [notice] <0.312.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:45:36.231 [notice] <0.312.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210676220044"]
+2015-01-14 11:46:36.235 [info] <0.312.0> GET /messages/receive_message/1421210676220044 [loy] 200 0ms
+2015-01-14 11:46:36.246 [notice] <0.315.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:46:36.249 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:46:36.255 [notice] <0.315.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:46:36.255 [notice] <0.315.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210736231543"]
+2015-01-14 11:47:01.273 [notice] <0.318.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:47:01.275 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:47:01.282 [notice] <0.318.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:47:01.282 [notice] <0.318.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:47:01.282 [info] <0.105.0>@boss_db_adapter_mysql:fetch:458 Query SELECT * FROM messages WHERE  TRUE ORDER BY id ASC
+2015-01-14 11:47:01.306 [info] <0.318.0> GET /messages/index [loy] 200 0ms
+2015-01-14 11:47:01.438 [notice] <0.319.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:47:01.439 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:47:01.443 [notice] <0.319.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:47:01.443 [notice] <0.319.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210821283548"]
+2015-01-14 11:47:26.008 [notice] <0.324.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:47:26.009 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:47:26.034 [notice] <0.324.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:47:26.034 [notice] <0.324.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:47:26.035 [info] <0.101.0>@boss_db_adapter_mysql:fetch:458 Query SELECT * FROM messages WHERE  TRUE ORDER BY id ASC
+2015-01-14 11:47:26.080 [info] <0.324.0> GET /messages/index [loy] 200 0ms
+2015-01-14 11:47:26.218 [notice] <0.325.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:47:26.219 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:47:26.224 [notice] <0.325.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:47:26.224 [notice] <0.325.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210846036655"]
+2015-01-14 11:47:33.598 [notice] <0.330.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:47:33.599 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:47:33.605 [notice] <0.330.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:47:33.605 [notice] <0.330.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:47:33.606 [info] <0.102.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'I am fine.')
+2015-01-14 11:47:33.917 [info] <0.102.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:47:33.920 [error] <0.319.0>@boss_web_controller_handle_request:handle_request:30 Unhandled Error: exit:normal. Stacktrace: [{mochicow_request,send,2,[{file,"src/mochicow_request.erl"},{line,156}]},{mochicow_request,respond,2,[{file,"src/mochicow_request.erl"},{line,406}]},{boss_web_controller_handle_request,handle_request,3,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,26}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,529}]}]
+2015-01-14 11:47:33.920 [info] <0.315.0> GET /messages/receive_message/1421210736231543 [loy] 200 0ms
+2015-01-14 11:47:33.920 [info] <0.319.0> GET /messages/receive_message/1421210821283548 [loy] 200 0ms
+2015-01-14 11:47:33.920 [info] <0.325.0> GET /messages/receive_message/1421210846036655 [loy] 200 0ms
+2015-01-14 11:47:33.920 [error] <0.315.0>@boss_web_controller_handle_request:handle_request:30 Unhandled Error: exit:normal. Stacktrace: [{mochicow_request,send,2,[{file,"src/mochicow_request.erl"},{line,156}]},{mochicow_request,respond,2,[{file,"src/mochicow_request.erl"},{line,406}]},{boss_web_controller_handle_request,handle_request,3,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,26}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,529}]}]
+2015-01-14 11:47:33.921 [info] <0.330.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:47:33.925 [notice] <0.332.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:47:33.926 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:47:33.933 [notice] <0.332.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:47:33.933 [notice] <0.332.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:47:33.937 [info] <0.332.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:47:33.938 [notice] <0.334.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:47:33.938 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:47:33.942 [notice] <0.334.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:47:33.942 [notice] <0.334.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210853918144"]
+2015-01-14 11:48:17.813 [notice] <0.336.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:17.814 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:17.818 [notice] <0.336.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:48:17.818 [notice] <0.336.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:48:17.819 [info] <0.103.0>@boss_db_adapter_mysql:fetch:458 Query SELECT * FROM messages WHERE  TRUE ORDER BY id ASC
+2015-01-14 11:48:17.847 [info] <0.336.0> GET /messages/index [loy] 200 0ms
+2015-01-14 11:48:17.980 [notice] <0.337.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:17.981 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:17.986 [notice] <0.337.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:48:17.988 [notice] <0.337.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210897820244"]
+2015-01-14 11:48:28.688 [notice] <0.342.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:28.689 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:28.693 [notice] <0.342.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:48:28.693 [notice] <0.342.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:48:28.694 [info] <0.104.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'Hello')
+2015-01-14 11:48:28.733 [info] <0.104.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:48:28.740 [info] <0.337.0> GET /messages/receive_message/1421210897820244 [loy] 200 0ms
+2015-01-14 11:48:28.740 [info] <0.334.0> GET /messages/receive_message/1421210853918144 [loy] 200 0ms
+2015-01-14 11:48:28.740 [error] <0.334.0>@boss_web_controller_handle_request:handle_request:30 Unhandled Error: exit:normal. Stacktrace: [{mochicow_request,send,2,[{file,"src/mochicow_request.erl"},{line,156}]},{mochicow_request,respond,2,[{file,"src/mochicow_request.erl"},{line,406}]},{boss_web_controller_handle_request,handle_request,3,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,26}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,529}]}]
+2015-01-14 11:48:28.742 [info] <0.342.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:48:28.747 [notice] <0.344.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:28.747 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:28.758 [notice] <0.344.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:48:28.759 [notice] <0.344.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:48:28.759 [notice] <0.346.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:28.763 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:28.765 [info] <0.344.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:48:28.772 [notice] <0.346.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:48:28.772 [notice] <0.346.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210908735337"]
+2015-01-14 11:48:31.724 [notice] <0.348.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:31.724 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:31.729 [notice] <0.348.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:48:31.729 [notice] <0.348.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:48:31.730 [info] <0.105.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'Hi')
+2015-01-14 11:48:31.762 [info] <0.105.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:48:31.766 [info] <0.346.0> GET /messages/receive_message/1421210908735337 [loy] 200 0ms
+2015-01-14 11:48:31.769 [info] <0.348.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:48:31.776 [notice] <0.350.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:31.778 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:31.788 [notice] <0.352.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:48:31.788 [notice] <0.350.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:48:31.788 [notice] <0.350.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:48:31.789 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:48:31.792 [info] <0.350.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:48:31.798 [notice] <0.352.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:48:31.798 [notice] <0.352.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210911763749"]
+2015-01-14 11:49:01.628 [notice] <0.354.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:01.628 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:01.632 [notice] <0.354.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:49:01.632 [notice] <0.354.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:49:01.632 [info] <0.101.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'Bunlong Jinglong')
+2015-01-14 11:49:01.661 [info] <0.101.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:49:01.664 [info] <0.352.0> GET /messages/receive_message/1421210911763749 [loy] 200 0ms
+2015-01-14 11:49:01.665 [info] <0.354.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:49:01.665 [error] <0.352.0>@boss_web_controller_handle_request:handle_request:30 Unhandled Error: exit:normal. Stacktrace: [{mochicow_request,send,2,[{file,"src/mochicow_request.erl"},{line,156}]},{mochicow_request,respond,2,[{file,"src/mochicow_request.erl"},{line,406}]},{boss_web_controller_handle_request,handle_request,3,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,26}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,529}]}]
+2015-01-14 11:49:01.668 [notice] <0.356.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:01.669 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:01.672 [notice] <0.356.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:49:01.672 [notice] <0.356.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:49:01.675 [info] <0.356.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:49:06.039 [notice] <0.358.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:06.054 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:06.074 [notice] <0.358.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:49:06.074 [notice] <0.358.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:49:06.075 [info] <0.102.0>@boss_db_adapter_mysql:fetch:458 Query SELECT * FROM messages WHERE  TRUE ORDER BY id ASC
+2015-01-14 11:49:06.083 [info] <0.358.0> GET /messages/index [loy] 200 0ms
+2015-01-14 11:49:06.222 [notice] <0.360.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:06.222 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:06.225 [notice] <0.360.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:49:06.225 [notice] <0.360.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210946079270"]
+2015-01-14 11:49:48.383 [notice] <0.363.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:48.385 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:48.389 [notice] <0.363.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:49:48.389 [notice] <0.363.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:49:48.389 [info] <0.103.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'Hi')
+2015-01-14 11:49:48.424 [info] <0.103.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:49:48.426 [info] <0.360.0> GET /messages/receive_message/1421210946079270 [loy] 200 0ms
+2015-01-14 11:49:48.428 [info] <0.363.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:49:48.437 [notice] <0.365.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:48.438 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:48.443 [notice] <0.365.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:49:48.443 [notice] <0.365.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:49:48.447 [notice] <0.367.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:48.458 [info] <0.365.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:49:48.459 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:48.470 [notice] <0.367.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:49:48.470 [notice] <0.367.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210988425147"]
+2015-01-14 11:49:57.365 [notice] <0.369.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:57.369 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:57.376 [notice] <0.369.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:49:57.376 [notice] <0.369.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:49:57.377 [info] <0.104.0>@boss_db_adapter_mysql:fetch:458 Query SELECT * FROM messages WHERE  TRUE ORDER BY id ASC
+2015-01-14 11:49:57.387 [info] <0.369.0> GET /messages/index [loy] 200 0ms
+2015-01-14 11:49:57.542 [notice] <0.370.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:49:57.543 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:49:57.547 [notice] <0.370.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:49:57.547 [notice] <0.370.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421210997381894"]
+2015-01-14 11:50:00.860 [notice] <0.374.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:50:00.861 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:50:00.865 [notice] <0.374.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-14 11:50:00.865 [notice] <0.374.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:50:00.865 [info] <0.105.0>@boss_db_adapter_mysql:fetch:458 Query INSERT INTO messages (`created_at`, `message`) values ('1421-**-**T00:00:00', 'sfsa')
+2015-01-14 11:50:00.904 [info] <0.105.0>@boss_db_adapter_mysql:fetch:458 Query SELECT last_insert_id()
+2015-01-14 11:50:00.906 [info] <0.367.0> GET /messages/receive_message/1421210988425147 [loy] 200 0ms
+2015-01-14 11:50:00.908 [info] <0.370.0> GET /messages/receive_message/1421210997381894 [loy] 200 0ms
+2015-01-14 11:50:00.908 [error] <0.367.0>@boss_web_controller_handle_request:handle_request:30 Unhandled Error: exit:normal. Stacktrace: [{mochicow_request,send,2,[{file,"src/mochicow_request.erl"},{line,156}]},{mochicow_request,respond,2,[{file,"src/mochicow_request.erl"},{line,406}]},{boss_web_controller_handle_request,handle_request,3,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,26}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,529}]}]
+2015-01-14 11:50:00.909 [info] <0.374.0> POST /messages/create [loy] 302 0ms
+2015-01-14 11:50:00.914 [notice] <0.376.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:50:00.916 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:50:00.922 [notice] <0.376.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:50:00.922 [notice] <0.376.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-14 11:50:00.926 [info] <0.376.0> GET /messages/create [loy] 200 0ms
+2015-01-14 11:50:00.926 [notice] <0.371.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath loy
+2015-01-14 11:50:00.927 [info] <0.273.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/loy/priv/loy.routes" ....
+2015-01-14 11:50:00.945 [notice] <0.371.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-14 11:50:00.945 [notice] <0.371.0>@boss_controller_adapter_pmod:action:92 Tokens ["1421211000905302"]
+2015-01-14 11:50:30.214 [error] <0.122.0> Supervisor {<0.122.0>,poolboy_sup} had child boss_session_controller started with boss_session_controller:start_link([{name,{local,boss_session_pool}},{worker_module,boss_session_controller},{size,20},{max_overflow,...},...]) at undefined exit with reason shutdown in context shutdown_error
